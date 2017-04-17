@@ -13,15 +13,23 @@ public class Main {
         System.out.println("Please enter a word: ");
         s = scnr.next();
 
-        s.toLowerCase();
+        /*s = s.toLowerCase();*/
+
+        for (int i = 0; i < s.length(); i++)
+        {
+            if ( !((65 <= s.charAt(i) && s.charAt(i) <= 90) || (97 <= s.charAt(i) && s.charAt(i) <= 122)) )
+            {
+                System.out.println(s);
+                return;
+            }
+        }
 
         if (s.charAt(0) == 'a' || s.charAt(0) == 'e' || s.charAt(0) == 'i' || s.charAt(0) == 'o' || s.charAt(0) == 'u')
         {
-            System.out.println(s.concat("way"));
+            System.out.println(s.substring(1, 2).toUpperCase() + s.substring(2) + s.charAt(0) + "way");
         }
         else
         {
-            Character.toUpperCase(s.charAt(1));
             System.out.println(s.substring(1, s.length()) + s.charAt(0) + "ay");
         }
 
