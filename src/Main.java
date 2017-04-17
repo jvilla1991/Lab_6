@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Please enter a sentence without punctuation: ");
         s = scnr.nextLine();
 
-        s = s.toLowerCase()
+        s = s.toLowerCase();
 
         String[] z = s.split(" ");
 
