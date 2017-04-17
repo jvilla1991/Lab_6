@@ -13,6 +13,8 @@ public class Main {
         System.out.println("Please enter a sentence without punctuation: ");
         s = scnr.nextLine();
 
+        s = s.toLowerCase()
+
         String[] z = s.split(" ");
 
 
@@ -31,7 +33,7 @@ public class Main {
             if (z[i].charAt(0) == 'a' || z[i].charAt(i) == 'e' || z[i].charAt(0) == 'i' || z[i].charAt(0) == 'o' || z[i].charAt(0) == 'u')
             {
                 if (!(z[i].length() < 2))
-                System.out.print(z[i].substring(1, 2) + z[i].substring(2) + z[i].substring(0, 1).toLowerCase() + "way ");
+                System.out.print(z[i].substring(1, 2) + z[i].substring(2) + z[i].substring(0, 1) + "way ");
                 else
                 {
                     System.out.print(z[i].charAt(0) + "way ");
@@ -40,7 +42,7 @@ public class Main {
             else
             {
                 if (!(z[i].length() < 2))
-                System.out.print(z[i].substring(1, 2) + z[i].substring(2) +  z[i].substring(0, 1).toLowerCase() + "ay ");
+                System.out.print(z[i].substring(1, 2) + z[i].substring(2) +  z[i].substring(0, 1) + "ay ");
                 else
                 {
                     System.out.println(z[i].charAt(0) + "ay ");
